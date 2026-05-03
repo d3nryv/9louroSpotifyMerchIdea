@@ -1,0 +1,474 @@
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* GLOBAL STYLES - Shared across all pages */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+:root {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #ffffff;
+  --text-sub: #a7a7a7;
+  --green: #1ed760;
+  --green-hover: #1fdf64;
+  --radius: 4px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'CircularSp', 'Circular Std', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+
+/* ── HEADER ── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo svg { 
+  display: block; 
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: opacity .15s;
+  padding: 30px 0px 30px;
+}
+.nav-back:hover { 
+  opacity: .75; 
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: opacity .15s;
+}
+.icon-btn:hover { 
+  opacity: .75; 
+}
+
+/* ── ARTIST TITLE BAR (index.html) ── */
+.artist-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0 20px;
+}
+
+.artist-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.artist-meta p:first-child {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 2px;
+}
+
+.artist-meta a {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.artist-meta a:hover { 
+  text-decoration: underline; 
+}
+
+/* ── FILTERS (index.html) ── */
+.filters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-label {
+  font-size: 13px;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+select {
+  background: var(--bg);
+  border: 1px solid #3a3a3a;
+  color: var(--text);
+  padding: 8px 36px 8px 12px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .15s;
+}
+select:focus { 
+  border-color: var(--text); 
+}
+
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text);
+}
+
+.stock-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stock-filter input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--green);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.stock-filter input[type="checkbox"]:checked {
+  background: var(--green);
+}
+.stock-filter input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #000;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.stock-filter span {
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* ── PRODUCT GRID (index.html) ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity .15s;
+}
+.product-card:hover { 
+  opacity: .85; 
+}
+
+.product-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.product-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.product-price {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* ── PAGINATION (index.html) ── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 0 32px;
+}
+
+.page-count {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.page-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background .15s;
+}
+.page-btn:hover:not(:disabled) { 
+  background: #2a2a2a; 
+}
+.page-btn:disabled { 
+  opacity: .35; 
+  cursor: default; 
+}
+
+/* ── DISCLAIMER ── */
+.disclaimer-section {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  margin-bottom: 24px;
+}
+
+.disclaimer-section p,
+.disclaimer {
+  font-size: 11px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color .15s;
+}
+.footer-links a:hover { 
+  color: var(--text); 
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+/* ── CART DRAWER ── */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 200;
+  display: none;
+  opacity: 0;
+  transition: opacity .25s;
+}
+.drawer-backdrop.open { 
+  display: flex; 
+  opacity: 1; 
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 360px;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  transition: right .25s ease;
+}
+.drawer.open { 
+  right: 0; 
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.drawer-title {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+}
+
+.drawer-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  text-align: center;
+}
+
+.empty-cart-msg {
+  font-size: 14px;
+  color: #666;
+}
+
+.start-shopping-btn {
+  background: var(--green);
+  color: #000;
+  border: none;
+  border-radius: 500px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+}
+.start-shopping-btn:hover { 
+  background: var(--green-hover); 
+}
+
+/* ── BANNER ── */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a2a2a;
+  padding: 12px 24px;
+  font-size: 13px;
+  color: var(--text);
+}
+.banner svg { 
+  flex-shrink: 0; 
+}
+.banner-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  padding: 2px;
+  border-radius: 50%;
+  transition: opacity .15s;
+}
+.banner-close:hover { 
+  opacity: .65; 
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .products-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px; 
+  }
+  body { 
+    padding: 16px 16px 0; 
+  }
+}

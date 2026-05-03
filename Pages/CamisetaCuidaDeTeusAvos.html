@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://shop.spotify.com/favicon.ico">
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/product-styles.css">
+  <title>Spotify - CAMISETA CUIDA DE TUS AVOS 9LOURO</title>
+</head>
+<body>
+
+<!-- CART DRAWER -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="closeCart()"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <span class="drawer-title">Tu carrito</span>
+    <button class="drawer-close" onclick="closeCart()" aria-label="Cerrar carrito">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <p class="empty-cart-msg">Tu carrito está vacío</p>
+    <button class="start-shopping-btn" onclick="closeCart()">Empezar a comprar</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-left">
+    <a href="../index.html" class="logo" aria-label="Spotify">
+      <svg width="130" height="50" viewBox="0 0 78 24" fill="white">
+        <path d="M18.616 10.639c-3.77-2.297-9.99-2.509-13.59-1.388a1.077 1.077 0 0 1-1.164-.363 1.14 1.14 0 0 1-.119-1.237c.136-.262.37-.46.648-.548 4.132-1.287 11-1.038 15.342 1.605a1.138 1.138 0 0 1 .099 1.863 1.081 1.081 0 0 1-.813.213c-.142-.02-.28-.07-.403-.145Zm-.124 3.402a.915.915 0 0 1-.563.42.894.894 0 0 1-.69-.112c-3.144-1.983-7.937-2.557-11.657-1.398a.898.898 0 0 1-.971-.303.952.952 0 0 1-.098-1.03.929.929 0 0 1 .54-.458c4.248-1.323 9.53-.682 13.14 1.595a.95.95 0 0 1 .3 1.286Zm-1.43 3.267a.73.73 0 0 1-.45.338.712.712 0 0 1-.553-.089c-2.748-1.722-6.204-2.111-10.276-1.156a.718.718 0 0 1-.758-.298.745.745 0 0 1-.115-.265.757.757 0 0 1 .092-.563.737.737 0 0 1 .457-.333c4.455-1.045 8.277-.595 11.361 1.338a.762.762 0 0 1 .241 1.028ZM11.696 0C5.237 0 0 5.373 0 12c0 6.628 5.236 12 11.697 12 6.46 0 11.698-5.372 11.698-12 0-6.627-5.238-12-11.699-12h.001Zm20.126 11.078c-2.019-.494-2.379-.84-2.379-1.57 0-.688.633-1.151 1.572-1.151.91 0 1.814.352 2.76 1.076a.131.131 0 0 0 .187-.03l.987-1.426a.139.139 0 0 0-.025-.185c-1.127-.928-2.396-1.378-3.88-1.378-2.18 0-3.703 1.342-3.703 3.263 0 2.06 1.315 2.788 3.585 3.352 1.932.457 2.258.84 2.258 1.524 0 .757-.659 1.229-1.72 1.229-1.18 0-2.141-.408-3.216-1.364a.13.13 0 0 0-.188.016l-1.106 1.35a.137.137 0 0 0 .013.188c1.252 1.147 2.79 1.752 4.451 1.752 2.35 0 3.869-1.317 3.869-3.356 0-1.723-1.003-2.676-3.465-3.29Zm10.487 2.31c0 1.454-.874 2.47-2.125 2.47-1.235 0-2.169-1.061-2.169-2.47 0-1.41.933-2.47 2.17-2.47 1.23 0 2.124 1.038 2.124 2.47Zm-1.706-4.354c-1.018 0-1.854.412-2.543 1.256v-.95a.136.136 0 0 0-.038-.095.132.132 0 0 0-.093-.04h-1.81a.131.131 0 0 0-.093.04.136.136 0 0 0-.039.096v10.546c0 .076.06.137.133.137h1.809a.132.132 0 0 0 .093-.041.136.136 0 0 0 .038-.096v-3.329c.69.794 1.525 1.18 2.543 1.18 1.893 0 3.808-1.494 3.808-4.35 0-2.858-1.915-4.354-3.808-4.354Zm8.72 6.839c-1.297 0-2.274-1.068-2.274-2.486 0-1.422.943-2.455 2.244-2.455 1.305 0 2.288 1.069 2.288 2.487 0 1.422-.949 2.454-2.258 2.454Zm0-6.838c-2.438 0-4.347 1.926-4.347 4.383 0 2.432 1.896 4.338 4.317 4.338 2.445 0 4.36-1.92 4.36-4.369 0-2.44-1.901-4.353-4.33-4.353Zm9.535.17h-1.99V7.117a.136.136 0 0 0-.08-.126.13.13 0 0 0-.052-.01h-1.809a.133.133 0 0 0-.093.04.136.136 0 0 0-.038.095v2.087h-.87a.131.131 0 0 0-.122.085.139.139 0 0 0-.01.052v1.595c0 .074.06.135.132.135h.87v4.126c0 1.667.809 2.513 2.404 2.513.648 0 1.186-.138 1.694-.434a.135.135 0 0 0 .067-.117V15.64a.137.137 0 0 0-.063-.115.13.13 0 0 0-.129-.006c-.349.18-.685.263-1.061.263-.58 0-.84-.271-.84-.876V11.07h1.99a.13.13 0 0 0 .094-.04.136.136 0 0 0 .039-.096V9.339a.137.137 0 0 0-.039-.096.132.132 0 0 0-.094-.04v.001Zm6.934.007v-.255c0-.755.281-1.092.914-1.092.376 0 .68.077 1.019.194a.13.13 0 0 0 .118-.02.135.135 0 0 0 .056-.11V6.365a.137.137 0 0 0-.026-.081.133.133 0 0 0-.068-.05 4.852 4.852 0 0 0-1.502-.22c-1.67 0-2.554.965-2.554 2.788v.393h-.87a.132.132 0 0 0-.093.04.136.136 0 0 0-.038.096v1.603c0 .075.059.136.132.136h.87v6.364c0 .075.058.135.131.135h1.809c.072 0 .131-.06.131-.135V11.07h1.69l2.586 6.362c-.294.669-.583.802-.977.802-.319 0-.654-.098-.998-.29a.133.133 0 0 0-.105-.01.135.135 0 0 0-.078.072l-.612 1.38a.137.137 0 0 0 .056.175 3.733 3.733 0 0 0 1.932.508c1.334 0 2.073-.638 2.724-2.355l3.137-8.317a.14.14 0 0 0-.014-.126.131.131 0 0 0-.108-.06h-1.883a.132.132 0 0 0-.126.092l-1.928 5.651L69.006 9.3a.133.133 0 0 0-.124-.088h-3.09v.001Zm-4.02-.008h-1.809a.132.132 0 0 0-.093.041.136.136 0 0 0-.038.096v8.094c0 .075.06.135.132.135h1.809c.072 0 .131-.06.131-.135V9.34a.136.136 0 0 0-.038-.096.133.133 0 0 0-.094-.04Zm-.896-3.685a1.295 1.295 0 0 0-.919.393c-.243.25-.379.586-.377.937a1.342 1.342 0 0 0 .377.938 1.304 1.304 0 0 0 .92.393c.346-.002.677-.143.92-.393s.379-.587.377-.938c0-.735-.581-1.33-1.296-1.33h-.002Z"/>
+      </svg>
+    </a>
+  </div>
+  <div class="header-right">
+    <button class="icon-btn" onclick="openCart()" aria-label="Abrir carrito">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 5.3A1 1 0 0 0 5.6 20H19m-12 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0Zm8 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0Z" stroke="white" stroke-width="1.5" fill="none"/></svg>
+    </button>
+    <button class="icon-btn" aria-label="Perfil" onclick="window.location.href='./login.html'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10.165 11.101a2.5 2.5 0 0 1-.67 3.766L5.5 17.173A2.998 2.998 0 0 0 4 19.771v.232h16.001v-.232a3 3 0 0 0-1.5-2.598l-3.995-2.306a2.5 2.5 0 0 1-.67-3.766l.521-.626.002-.002c.8-.955 1.303-1.987 1.375-3.19.041-.706-.088-1.433-.187-1.727a3.717 3.717 0 0 0-.768-1.334 3.767 3.767 0 0 0-5.557 0c-.34.37-.593.82-.768 1.334-.1.294-.228 1.021-.187 1.727.072 1.203.575 2.235 1.375 3.19l.002.002.521.626z"/><path d="M15.727 11.758l-.52.624a.5.5 0 0 0 .134.753l3.995 2.306a5 5 0 0 1 2.5 4.33v2.232H2V19.77a5 5 0 0 1 2.5-4.33l3.995-2.306a.5.5 0 0 0 .134-.753l-.518-.622-.002-.002c-1-1.192-1.735-2.62-1.838-4.356-.056-.947.101-1.935.29-2.49A5.713 5.713 0 0 1 7.748 2.87a5.768 5.768 0 0 1 8.505 0 5.713 5.713 0 0 1 1.187 2.043c.189.554.346 1.542.29 2.489-.103 1.736-.838 3.163-1.837 4.355m-.001.001z"/></svg>
+    </button>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="white"><path d="M.47 4.97a.75.75 0 0 1 1.06 0L8 11.44l6.47-6.47a.75.75 0 1 1 1.06 1.06L8 13.56.47 6.03a.75.75 0 0 1 0-1.06z"/></svg>
+  </div>
+</header>
+
+<a href="../index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.957 2.793a1 1 0 0 1 0 1.414L8.164 12l7.793 7.793a1 1 0 1 1-1.414 1.414L5.336 12l9.207-9.207a1 1 0 0 1 1.414 0z"/></svg>
+    Explorar todo el merchandising
+</a>
+
+<!-- MAIN -->
+<main class="product-page">
+  <div class="product-layout">
+
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="gallery-main">
+        <img id="mainImg"
+          src="../Media/camiseta 3_1.jpg"
+          alt="9louro camiseta cuida de tous avos">
+        <button class="gallery-arrow prev" onclick="changeImg(-1)" aria-label="Imagen anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.414 3.5a.999.999 0 0 0-1.707-.707l-9.207 9.2 9.207 9.202a1 1 0 1 0 1.414-1.413L6.335 13H20.5a1 1 0 0 0 0-2H6.322l6.799-6.794a.999.999 0 0 0 .293-.707z"/></svg>
+        </button>
+        <button class="gallery-arrow next" onclick="changeImg(1)" aria-label="Imagen siguiente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10.586 3.5a.999.999 0 0 1 1.707-.707l9.207 9.2-9.207 9.202a1 1 0 1 1-1.414-1.413L17.665 13H3.5a1 1 0 1 1 0-2h14.178l-6.799-6.794a.999.999 0 0 1-.293-.707z"/></svg>
+        </button>
+      </div>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+      <h1 class="product-title">CAMISETA "CUIDA DE TOUS AVOS"</h1>
+
+      <div class="artist-row">
+        <img src="../Media/artist photo.png"
+             alt="9louro" class="artist-avatar">
+        <a href="../index.html" class="artist-name">9louro</a>
+      </div>
+
+      <div class="product-desc">
+        <p>
+            Camiseta de algodón suave. Diseño tipográfico frontal.
+
+            <br><br>Color: Blanco
+
+            <br><br>Corte: Unisex
+
+            <br><br>Material: 100% algodón
+        </p>
+      </div>
+
+      <div class="price-row">
+        <span class="currency-badge">EUR</span>
+        <span class="price">18,00 €</span>
+      </div>
+
+      <div>
+        <label class="qty-label" for="qty">Cantidad</label>
+        <div class="select-wrapper">
+          <select id="qty">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <span class="select-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M.47 4.97a.75.75 0 0 1 1.06 0L8 11.44l6.47-6.47a.75.75 0 1 1 1.06 1.06L8 13.56.47 6.03a.75.75 0 0 1 0-1.06z"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="addToCart()">Añadir al carrito</button>
+        <button class="btn btn-secondary" onclick="buyNow()">Comprar</button>
+      </div>
+
+      <p class="disclaimer">
+        Al hacer clic en "Comprar", saldrás del servicio de Spotify y se te redirigirá a la página de un proveedor externo. Todo lo que se haga en ella quedará sujeto a los términos y condiciones y a la política de privacidad de dicho proveedor. El proveedor podrá facilitarnos los datos de tu pedido, que nos ayudarán a conocer mejor tus intereses y a mejorar nuestros productos y ofertas, de conformidad con la Política de privacidad de Spotify. Los enlaces y la información sobre este artículo, como el precio y la moneda, son los que proporciona el vendedor de merchandising y están sujetos a cambios. Es posible que los vendedores cobren cargos adicionales, cuyo importe puede variar. El número de unidades disponibles es limitado.
+      </p>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="recs-section">
+    <h3 class="recs-title">Más artículos de 9louro</h3>
+    <div class="recs-grid" id="recsGrid"></div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <nav>
+    <ul class="footer-links">
+      <li><a href="https://www.spotify.com/legal/" target="_blank">Información legal</a></li>
+      <li><a href="https://www.spotify.com/privacy/" target="_blank">Centro de privacidad</a></li>
+      <li><a href="https://www.spotify.com/legal/privacy-policy/" target="_blank">Política de privacidad</a></li>
+      <li><a href="https://www.spotify.com/legal/cookies-policy/" target="_blank">Cookies</a></li>
+      <li><a href="https://www.spotify.com/legal/privacy-policy/#s3" target="_blank">Información sobre los anuncios</a></li>
+    </ul>
+  </nav>
+  <small class="copyright">© 2026 Spotify AB</small>
+</footer>
+
+<script>
+  // ── Gallery ──────────────────────────────────────────────────────────────
+  const images = [
+    '../Media/camiseta 3_1.jpg',
+    '../Media/camiseta 3_2.jpg',
+    '../Media/camiseta 3_3.jpg',
+  ];
+  let currentImg = 0;
+
+  const mainImg = document.getElementById('mainImg');
+  const dotsEl  = document.getElementById('galleryDots');
+
+  function renderDots() {
+    dotsEl.innerHTML = '';
+    images.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'dot' + (i === currentImg ? ' active' : '');
+      d.setAttribute('aria-label', `Imagen ${i + 1}`);
+      d.onclick = () => goTo(i);
+      dotsEl.appendChild(d);
+    });
+  }
+
+  function goTo(n) {
+    currentImg = (n + images.length) % images.length;
+    mainImg.src = images[currentImg];
+    renderDots();
+  }
+
+  function changeImg(dir) { goTo(currentImg + dir); }
+
+  renderDots();
+
+  // ── Recommendations ───────────────────────────────────────────────────────
+  const recs = [
+    { name: 'AMORRER VINILO', price: '30,00 €', img: '../Media/vinilo alante no back.png', ref: './AmorrerVinilo.html' },
+    { name: 'AMORRER CD', price: '15,00 €', img: '../Media/disco alante no back.png', ref: './AmorrerCD.html' },
+    { name: 'CAMISETA "AMORRER" NEGRO', price: '18,00 €', img: '../Media/camiseta negra.jpg', ref: './CamisetaAmorrerNegro.html' },
+    { name: 'CAMISETA "AMORRER" BLANCO',   price: '18,00 €', img: '../Media/camiseta blanca no back.png', ref: './CamisetaAmorrerBlanco.html' },
+  ];
+
+  const grid = document.getElementById('recsGrid');
+  recs.forEach(r => {
+    grid.innerHTML += `
+      <a href="${r.ref}" class="rec-card">
+        <img src="${r.img}" alt="${r.name}" class="rec-img">
+        <div class="rec-info">
+          <p class="rec-name">${r.name}</p>
+          <p class="rec-price">${r.price}</p>
+        </div>
+      </a>`;
+  });
+
+  // ── Cart ──────────────────────────────────────────────────────────────────
+  function openCart() {
+    document.getElementById('cartDrawer').classList.add('open');
+    document.getElementById('drawerBackdrop').classList.add('open');
+  }
+
+  function closeCart() {
+    document.getElementById('cartDrawer').classList.remove('open');
+    document.getElementById('drawerBackdrop').classList.remove('open');
+  }
+
+  function addToCart() {
+    openCart();
+  }
+
+  function buyNow() {
+    alert('Serías redirigido a la página del vendedor externo.');
+  }
+</script>
+<script src="../JS/script.js"></script>
+</body>
+</html>
